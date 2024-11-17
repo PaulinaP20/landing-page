@@ -5,16 +5,16 @@
 }
 
 body {
-    max-width:1400px;
     margin:0 auto;
-    padding:0 20px;
-    font-size:16px;
-    text-align:center;
-    background-color:#2a2222
+    padding:0;
 }
-
+.container {
+    max-width:1140px;
+    padding:0 20px;
+    margin:0 auto;
+}
 section {
-    padding:96px 0;
+    padding:60px 0;
 }
 
 /* header */
@@ -23,6 +23,7 @@ section {
     background-image: url('../images/background.jpg');
     height:100vh;
     position:relative;
+    text-align:center;
     background-size:cover;
     background-position:center center;
     background-attachment:fixed;
@@ -40,12 +41,17 @@ section {
     z-index:1;
 
 }
-
 .navigation {
     width:100%;
-    padding:20px 0;
     z-index:2;
-    
+}
+
+.navigation .container {
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding:10px;
 }
 
 .navigation li {
@@ -53,23 +59,11 @@ section {
     padding: 20px;
     font-size:20px;
     font-style:bold;
-
 }
 
 .navigation li a {
     text-decoration: none;
-    color:white;
-    
-}
-
-.container {
-    max-width:1140px;
-    padding:0 20px;
-    margin:0 auto;
-    display:flex;
-    align-items:center;
-    justify-content: space-between;
-    z-index:2;
+    color:white;   
 }
 
 .logo {
@@ -90,7 +84,6 @@ section {
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
-
 }
 
 .page-title {
@@ -128,3 +121,70 @@ section {
 }
 
 /* services */
+
+.services {
+    background-color: white;
+    text-align:center;
+    font-family:Arial, Helvetica, sans-serif;
+    
+    
+}
+.box-wrapper {
+    display:flex;
+    gap:10px;
+    margin:0 auto;
+    padding:0 30px;
+    justify-content:center;
+}
+
+.wrapper {
+    position:relative;
+    padding:30px;  
+}
+
+.title-box {
+    padding:10px;
+}
+
+.title-box .title {
+    font-weight: bold;
+    margin-bottom:10px;
+}
+
+.title-box p {
+    font-style: italic;
+    font-size:12px;
+    color:gray;
+}
+
+.icon i {
+    color:goldenrod;
+    font-size:24px;
+    border:solid;
+    border-radius:50%;
+    padding:20px;
+}
+
+.description {
+    color:gray;
+}
+
+@media (max-width: 767px) {
+    .navigation {
+        flex-direction:column;
+        align-items:center;
+    }
+    .menu {
+        margin-top:20px;
+    }
+    .box-wraper {
+        flex-direction:column;
+        width:100%;
+    }
+    section {
+        padding:50px;
+    }
+    .wrapper {
+        padding:20px;
+    }
+}
