@@ -1,1 +1,129 @@
-/*Global /*
+/* global */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    max-width:1400px;
+    margin:0 auto;
+    padding:0 20px;
+    font-size:16px;
+    text-align:center;
+    background-color:#2a2222
+}
+
+section {
+    padding:96px 0;
+}
+
+/* header */
+
+.splash {
+    background-image: url('../images/background.jpg');
+    height:100vh;
+    position:relative;
+    background-size:cover;
+    background-position:center center;
+    background-attachment:fixed;
+    display:flex;
+    flex-direction: column;
+    color:white;
+}
+
+.splash:before {
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.7);
+    z-index:1;
+
+}
+
+.navigation {
+    width:100%;
+    padding:20px 0;
+    z-index:2;
+    
+}
+
+.navigation li {
+    display:inline-block;
+    padding: 20px;
+    font-size:20px;
+    font-style:bold;
+
+}
+
+.navigation li a {
+    text-decoration: none;
+    color:white;
+    
+}
+
+.container {
+    max-width:1140px;
+    padding:0 20px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    z-index:2;
+}
+
+.logo {
+    font-size:32px;
+    font-family: "Lobster", sans-serif;
+    font-weight: 300;
+    color:goldenrod;
+    text-decoration:none;
+    font-style:italic;
+}
+
+.splash-inner {
+    z-index:2;
+    position:absolute;
+    padding:40px;
+    top:30px;
+    width:100%;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+
+}
+
+.page-title {
+    font-size:38px;
+    font-style:italic;
+    font-weight: 200;
+}
+
+.subtitle {
+    font-size:48px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.button {
+    padding:20px 40px;
+    background:goldenrod;
+    color:white;
+    font-weight:bold;
+    border:none;
+    cursor:pointer;
+}
+
+.button:hover {
+    background-color: darkgoldenrod;
+}
+
+.navigation li a:hover {
+    color: darkgoldenrod;
+    text-decoration:underline;
+    transition:color 0.3 ease;
+}
+
+.logo:hover {
+    text-shadow: 0px 0px 5px rgba(255, 215, 0, 0.8);
+}
+
